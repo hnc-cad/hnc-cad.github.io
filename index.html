@@ -239,7 +239,7 @@
             and 2) controls the generation or completion of CAD models by specifying the target design using a code tree. 
           </p>
           <p>
-            A novel variant of a vector quantized VAE with ``masked skip connection'' extracts design variations as 
+            A novel variant of a vector quantized VAE with "masked skip connection" extracts design variations as 
             neural codebooks at three levels. Two-stage cascaded auto-regressive transformers learn to generate code trees from 
             incomplete CAD models and then complete CAD models following the intended design. 
             Extensive experiments demonstrate superior performance on conventional tasks such as random generation 
@@ -287,6 +287,87 @@
       </div>
     </div>
     <!--/ DataFormat. -->
+
+
+
+    <!-- Codebook Learning. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> Three-Level Codebook Learning </h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Given a CAD model, it can be decomposed hierarchically into three levels: Loop defining a 
+            closed path of connected curves, Profile defining a closed area in the sketch plane bounded 
+            by one outer loop (and optionally some inner loops), and Solid representing a set of extruded sketch profiles, 
+            combined to form the entire CAD model.
+          </p>
+        </div>
+        <img src="./static/images/codebook.png"/>
+        <br/>
+
+      </div>
+    </div>
+    <!--/ Codebook Learning. -->
+
+
+    <!--  Generation Module. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> Generation Module </h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Given a CAD model, it can be decomposed hierarchically into three levels: Loop defining a 
+            closed path of connected curves, Profile defining a closed area in the sketch plane bounded 
+            by one outer loop (and optionally some inner loops), and Solid representing a set of extruded sketch profiles, 
+            combined to form the entire CAD model.
+          </p>
+        </div>
+        <img src="./static/images/gen.png"/>
+        <br/>
+
+      </div>
+    </div>
+    <!--/  Generation Module. -->
+
+
+
+     <!--  Results. -->
+     <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> Results </h2>
+
+        <h3 class="title is-4">Random Generation</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/"/>
+        <br/>
+
+        <h3 class="title is-4">Controllable Generation</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/"/>
+        <br/>
+
+        <h3 class="title is-4">Autocompletion</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/"/>
+        <br/>
+
+      </div>
+    </div>
+    <!--/  Results. -->
 
 
 
