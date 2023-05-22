@@ -234,31 +234,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            We present a novel generative model for Computer Aided Design (CAD) that 
+            1) represents high-level design concepts of a CAD model as a three-level hierarchical tree of neural codes, from global part arrangement down to local curve geometry; 
+            and 2) controls the generation or completion of CAD models by specifying the target design using a code tree. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Concretely, a novel variant of a vector quantized VAE with ``masked skip connection'' extracts design variations as 
+            neural codebooks at three levels. Two-stage cascaded auto-regressive transformers learn to generate code trees from 
+            incomplete CAD models and then complete CAD models following the intended design. 
+            Extensive experiments demonstrate superior performance on conventional tasks such as unconditional generation 
+            while enabling novel interaction capabilities on conditional generation tasks.
           </p>
         </div>
       </div>
