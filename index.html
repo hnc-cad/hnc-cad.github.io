@@ -242,7 +242,7 @@
             A novel variant of a vector quantized VAE with ``masked skip connection'' extracts design variations as 
             neural codebooks at three levels. Two-stage cascaded auto-regressive transformers learn to generate code trees from 
             incomplete CAD models and then complete CAD models following the intended design. 
-            Extensive experiments demonstrate superior performance on conventional tasks such as unconditional generation 
+            Extensive experiments demonstrate superior performance on conventional tasks such as random generation 
             while enabling novel interaction capabilities on conditional generation tasks.
           </p>
         </div>
@@ -275,9 +275,9 @@
 
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Given a CAD model, it can be decomposed hierarchically to three levels: Loop defining a 
+            closed path of connected curves, Profile defining a closed area in the sketch plane bounded 
+            by one outer loop (and optionally some inner loops), and Solid representing a set of extruded sketch profiles.
           </p>
         </div>
         <img src="./static/images/data_representation.png"/>
