@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [Hierarchical Neural Coding website](hnc-cad.github.io).
 
-If you find HNCoding useful for your work please cite:
+If you find it useful for your work please cite:
 ```
 @article{park2021nerfies
   author    = {Xiang Xu, Pradeep Kumar Jayaraman, Joseph G. Lambourne, Karl D.D. Willis, Yasutaka Furukawa},
