@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Hierarchical neural code tree for controllable CAD model generation.">
-  <meta name="keywords" content="CAD, Autocomplete, Generation, Controllable, Transformer, VQ-VAE, Codebook, Hierarchical">
+  <meta name="keywords" content="CAD, Autocomplete, Controllable, Generation, Transformer, VQ-VAE, Codebook, Hierarchical">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hierarchical Neural Coding for Controllable CAD Model Generation</title>
 
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -105,7 +105,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/"
+                <a href="https://arxiv.org/pdf/www"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -114,7 +114,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/"
+                <a href="https://arxiv.org/abs/www"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -124,7 +124,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="www"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -154,14 +154,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/teaser.png"/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        Our system learns high-level design concepts as discrete codes at different levels, 
+        enabling more diverse and higher-quality generation; 
+        novel user controls while specifying design intent; 
+        and autocompleting a partial CAD model under construction.
       </h2>
     </div>
   </div>
@@ -255,7 +253,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/xxx"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -274,7 +272,7 @@
 
         <div class="content has-text-justified">
           <p>
-            Given a CAD model, it can be decomposed hierarchically into three levels: Loop defining a 
+            We decomposed a CAD model hierarchically into three levels: Loop defining a 
             closed path of connected curves, Profile defining a closed area in the sketch plane bounded 
             by one outer loop (and optionally some inner loops), and Solid representing a set of extruded sketch profiles, 
             combined to form the entire CAD model.
@@ -295,14 +293,14 @@
     <!-- Codebook Learning. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3"> Three-Level Codebook Learning </h2>
+        <h2 class="title is-3"> Codebook Learning with Masking </h2>
 
         <div class="content has-text-justified">
           <p>
-            Given a CAD model, it can be decomposed hierarchically into three levels: Loop defining a 
-            closed path of connected curves, Profile defining a closed area in the sketch plane bounded 
-            by one outer loop (and optionally some inner loops), and Solid representing a set of extruded sketch profiles, 
-            combined to form the entire CAD model.
+            Given a CAD model as a construction sequence (e.g., x, y, S), an MLP and a Transformer encoder convert the input to latent codes and applies vector quantization. 
+            A Transformer decoder recovers the full input sequence, conditioned on the vector-quantized code and a masked out version of the input
+            sequence. Masking forces the decoder to relate unmasked elements and fill-in missing ones, conditioned on the quantized code. 
+            This is effective for codebook learning of instance-agnostic design patterns.
           </p>
         </div>
         <img src="./static/images/codebook.png"/>
@@ -324,10 +322,9 @@
 
         <div class="content has-text-justified">
           <p>
-            Given a CAD model, it can be decomposed hierarchically into three levels: Loop defining a 
-            closed path of connected curves, Profile defining a closed area in the sketch plane bounded 
-            by one outer loop (and optionally some inner loops), and Solid representing a set of extruded sketch profiles, 
-            combined to form the entire CAD model.
+            Controllable CAD generation module with two-stage auto-regressive generators. Given a partial CAD model, a model
+            encoder converts it to latent embeddings. The first auto-regressive Transformer generates hierarchical neural codes based on
+            the latent embeddings. The second auto-regressive Transformer generates a new CAD model conditioned on the predicted neural codes as well the previous partial CAD embeddings.
           </p>
         </div>
         <img src="./static/images/gen.png"/>
