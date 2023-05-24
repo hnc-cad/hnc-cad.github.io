@@ -168,6 +168,12 @@
 
 <!-- Import the component -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+<style>
+  model-viewer {
+    width: 800px;
+    height: 600px;
+  }
+</style>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -175,6 +181,7 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <model-viewer alt="test test" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+          
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
