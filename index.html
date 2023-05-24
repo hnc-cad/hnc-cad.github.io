@@ -298,8 +298,8 @@
         <div class="content has-text-justified">
           <p>
             Given a CAD model as a construction sequence (e.g., x, y, S), an MLP and a Transformer encoder convert the input to latent codes and applies vector quantization. 
-            A Transformer decoder recovers the full input sequence, conditioned on the vector-quantized code and a masked out version of the input
-            sequence. Masking forces the decoder to relate unmasked elements and fill-in missing ones, conditioned on the quantized code. 
+            A Transformer decoder recovers the full input sequence, conditioned on the quantized code and masked out input. 
+            Masking forces the decoder to relate unmasked elements and fill-in missing ones conditioned on the code. 
             This is effective for codebook learning of instance-agnostic design patterns.
           </p>
         </div>
@@ -322,9 +322,9 @@
 
         <div class="content has-text-justified">
           <p>
-            Controllable CAD generation module with two-stage auto-regressive generators. Given a partial CAD model, a model
+            Controllable CAD generation consists of two-stage auto-regressive generators. Given a partial CAD model, a model
             encoder converts it to latent embeddings. The first auto-regressive Transformer generates hierarchical neural codes based on
-            the latent embeddings. The second auto-regressive Transformer generates a new CAD model conditioned on the predicted neural codes as well the previous partial CAD embeddings.
+            the latent embeddings. The second auto-regressive Transformer generates a new CAD model conditioned on the predicted neural codes as well the previous partial CAD encoding.
           </p>
         </div>
         <img src="./static/images/gen.png"/>
