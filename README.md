@@ -4,7 +4,7 @@ This is the repository that contains source code for the [Hierarchical Neural Co
 
 If you find it useful for your work please cite:
 ```
-@article{park2021nerfies
+@article{xu2023hnc
   author    = {Xiang Xu, Pradeep Kumar Jayaraman, Joseph G. Lambourne, Karl D.D. Willis, Yasutaka Furukawa},
   title     = {Hierarchical Neural Coding for Controllable CAD Model Generation},
   journal   = {ICML},
